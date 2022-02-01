@@ -7,11 +7,15 @@ let entertainments = ['Movies', 'Concert', 'Walk in Park', 'Bowling', 'Go to the
 // generate random numbers\
 function randomPick(trip){    
     randomNumber = Math.floor(Math.random()* trip.length)
-    
-    console.log(trip[randomNumber])
+    return trip[randomNumber]
     
 }
-randomPick(destinations);
-randomPick(restaurants);
-randomPick(transportation);
-randomPick(entertainments);
+// Display picks from arrays
+function selected(){
+    console.log('Traveling to ' + randomPick(destinations))
+    console.log('Restaurants is ' + randomPick(restaurants))
+    console.log('Transportation is ' + randomPick(transportation))
+    console.log('Entertainment is ' + randomPick(entertainments))
+}
+
+selected()
