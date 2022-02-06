@@ -6,10 +6,22 @@ let entertainments = ['Movies', 'Concert', 'Walk in Park', 'Bowling', 'Go to the
 
 // generate random numbers\
 function randomPick(trip){    
-    randomNumber = Math.floor(Math.random()* trip.length)
-    return trip[randomNumber]
+    randomNumber = Math.floor(Math.random()* trip.length);
+    return trip[randomNumber];
     
 }
+
+// user wants to change one of trip options 
+function ifUserWantsAChange(){
+    userAnswer = prompt('Would you like to change an option? ').toLowerCase();
+    if(userAnswer === 'yes'){
+        userAnswer = prompt
+    }
+}
+function reselect(newSelection){
+
+}
+
 // Display picks from arrays
 function selected(){
     console.log('Traveling to ' + randomPick(destinations))
