@@ -12,14 +12,52 @@ function randomPick(trip){
 }
 
 // user wants to change one of trip options 
-function ifUserWantsAChange(){
+function wantsAChange(){
     userAnswer = prompt('Would you like to change an option? ').toLowerCase();
     if(userAnswer === 'yes'){
-        userAnswer = prompt
+       return userAnswer;
+        }
+    else if(userAnswer === 'no'){
+        return false;
     }
 }
-function reselect(newSelection){
 
+function reselect(answer){
+    if(answer = 'yes'){
+        userAnswer = prompt('What would you like to change? selcect Destination, Restaurant, Transportation, or Entertainments').toLowerCase();
+        switch(userAnswer){
+            case 'destination':
+                return userAnswer;
+                break;
+            case 'restaurant':
+                return userAnswer;
+                break;
+            case 'transportation':
+                return userAnswer;
+                break;
+            case 'entertainments':
+                return userAnswer;
+                break;
+    }
+}
+}
+
+function newPick(reselection){
+    switch(reselection){
+        case 'destination': 
+                userAnswer = prompt('Where would you like to go to?');
+                return userAnswer;
+                break;
+            case 'restaurant':
+                return userAnswer;
+                break;
+            case 'transportation':
+                return userAnswer;
+                break;
+            case 'entertainments':
+                return userAnswer;
+                break;
+    }
 }
 
 // Display picks from arrays
@@ -30,4 +68,5 @@ function selected(){
     console.log('Entertainment is ' + randomPick(entertainments))
 }
 
-selected()
+selected();
+reselect(wantsAChange());
